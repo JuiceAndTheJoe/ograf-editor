@@ -256,7 +256,6 @@ class OGrafEditor {
                 return `
                     <div class="template-item ${isActive ? 'active' : ''}" data-template-id="${template.manifest.id}">
                         <div class="template-item-actions">
-                            <button class="template-action-btn duplicate-btn" title="Duplicate">📋</button>
                             <button class="template-action-btn delete-btn" title="Delete">🗑️</button>
                         </div>
                         <h4>${template.manifest.name}</h4>
@@ -276,12 +275,6 @@ class OGrafEditor {
                 if (templateItem && !e.target.classList.contains('template-action-btn')) {
                     this.selectTemplate(templateItem.dataset.templateId);
                 }
-
-                if (e.target.classList.contains('duplicate-btn')) {
-                    const templateId = e.target.closest('.template-item').dataset.templateId;
-                    this.duplicateTemplate(templateId);
-                }
-
                 if (e.target.classList.contains('delete-btn')) {
                     const templateId = e.target.closest('.template-item').dataset.templateId;
                     this.deleteTemplate(templateId);
@@ -294,26 +287,6 @@ class OGrafEditor {
         if (this.templateManager.setCurrentTemplate(templateId)) {
             this.updateTemplateList();
             this.refreshAllViews();
-        }
-    }
-
-    duplicateTemplate(templateId) {
-        const originalTemplate = this.templateManager.getTemplate(templateId);
-        if (!originalTemplate) return;
-
-        const newId = prompt('Enter ID for the duplicated template:', `${templateId}-copy`);
-        if (!newId) return;
-
-        const newName = prompt('Enter name for the duplicated template:', `${originalTemplate.manifest.name} (Copy)`);
-        if (!newName) return;
-
-        try {
-            this.templateManager.duplicateTemplate(templateId, newId, newName);
-            this.updateTemplateList();
-            this.selectTemplate(newId);
-            this.showSuccessMessage(`Template duplicated as "${newName}"`);
-        } catch (error) {
-            alert(`Error duplicating template: ${error.message}`);
         }
     }
 
