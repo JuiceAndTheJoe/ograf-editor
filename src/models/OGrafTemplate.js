@@ -429,9 +429,6 @@ class ${this.toCamelCase(this.manifest.id)}Graphic extends HTMLElement {
                 slideInDirection: 'left'
             };
             
-            console.log('animateSlideIn - this.animationSettings:', this.animationSettings);
-            console.log('animateSlideIn - final settings used:', settings);
-            
             const elements = this.shadowRoot.querySelectorAll('.element');
             if (elements.length === 0) {
                 resolve();
@@ -451,14 +448,10 @@ class ${this.toCamelCase(this.manifest.id)}Graphic extends HTMLElement {
                 default: transform = 'translateX(-100%)';
             }
             
-            console.log('animateSlideIn - direction:', direction, 'transform:', transform);
-            
             elements.forEach(element => {
                 // Set initial position before animation
                 element.style.transform = transform;
                 element.style.transition = 'none';
-                console.log('animateSlideIn - setting initial transform on element:', element.className, 'to:', transform);
-                console.log('animateSlideIn - computed transform after setting:', getComputedStyle(element).transform);
             });
             
             // Force a reflow to ensure the initial transform is applied
@@ -470,7 +463,6 @@ class ${this.toCamelCase(this.manifest.id)}Graphic extends HTMLElement {
                 // Trigger animation
                 requestAnimationFrame(() => {
                     element.style.transform = 'translateX(0) translateY(0)';
-                    console.log('animateSlideIn - animating element:', element.className, 'to final position: translateX(0) translateY(0)');
                 });
             });
             
