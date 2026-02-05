@@ -4,45 +4,51 @@ A web-based graphics template editor for broadcast based on the EBU OGraf standa
 
 ![OGraf Template Editor Screenshot](screenshot.png)
 
-## 🚀 Try it Now
+---
 
-The quickest way to try out the OGraf Template Editor is through **Eyevinn Open Source Cloud**:
+<div align="center">
 
-**[Launch OGraf Editor →](https://app.osaas.io/browse/eyevinn-ograf-editor)**
+## Quick Demo: Open Source Cloud
 
-No installation required - get started in seconds!
+Run this service in the cloud with a single click.
+
+[![Badge OSC](https://img.shields.io/badge/Try%20it%20out!-1E3A8A?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMTIiIGN5PSIxMiIgcj0iMTIiIGZpbGw9InVybCgjcGFpbnQwX2xpbmVhcl8yODIxXzMxNjcyKSIvPgo8Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSI3IiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz4KPGRlZnM+CjxsaW5lYXJHcmFkaWVudCBpZD0icGFpbnQwX2xpbmVhcl8yODIxXzMxNjcyIiB4MT0iMTIiIHkxPSIwIiB4Mj0iMTIiIHkyPSIyNCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgo8c3RvcCBzdG9wLWNvbG9yPSIjQzE4M0ZGIi8+CjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzREQzlGRiIvPgo8L2xpbmVhckdyYWRpZW50Pgo8L2RlZnM+Cjwvc3ZnPgo=)](https://app.osaas.io/browse/eyevinn-ograf-editor)
+
+</div>
+
+---
 
 ## Features
 
-### 🎨 Visual Editor
+### Visual Editor
 - **Drag-and-drop interface** for creating graphics elements
 - **Real-time canvas preview** with visual element manipulation
 - **Element toolbar** with text, images, rectangles, and circles
 - **Property panel** for fine-tuning element styles and properties
 - **Responsive design** with proper layout handling
 
-### 💻 Code Editor
+### Code Editor
 - **Monaco Editor integration** with full syntax highlighting
 - **JSON manifest editor** with real-time validation and error detection
 - **JavaScript component viewer** for generated web components
 - **Tabbed interface** switching between manifest and component code
 - **Professional code editing** with IntelliSense support
 
-### 🎬 Preview Engine
+### Preview Engine
 - **Real-time preview** with animation support
 - **Play/Stop controls** for testing graphic animations
 - **Dynamic data inputs** for testing template variables
 - **Animation controls** with configurable directions and timing
 - **Export functionality** for generating preview images
 
-### 📋 Template Management
+### Template Management
 - **Template creation wizard** with predefined types
 - **Local storage persistence** for template management
 - **Import/Export functionality** for sharing templates
 - **Template validation** against OGraf specification
 - **Responsive template list** with proper scrolling
 
-### ⚙️ Advanced Animation System
+### Advanced Animation System
 - **Slide animations** with 4-direction support (left, right, top, bottom)
 - **Independent slide-in/slide-out** direction controls  
 - **Configurable timing** functions (ease-in, ease-out, linear, ease-in-out)
@@ -119,14 +125,14 @@ No installation required - get started in seconds!
 
 This editor generates templates that are **fully compliant** with the [EBU OGraf v1 specification](https://ograf.ebu.io/v1/specification/docs/Specification.html):
 
-### ✅ Manifest Compliance
+### Manifest Compliance
 - **$schema**: Proper JSON schema validation
 - **Required fields**: id, name, main, supportsRealTime/supportsNonRealTime
 - **Custom actions**: Standardized slideIn/slideOut actions
 - **Data schema**: Proper parameter definitions for dynamic content
 - **Step count**: Single-step graphics support
 
-### ✅ Web Component Compliance
+### Web Component Compliance
 - **HTMLElement inheritance**: Standard web component structure
 - **Shadow DOM**: Style encapsulation and isolation
 - **ES Module exports**: Proper module system compatibility
@@ -216,4 +222,4 @@ For issues and questions:
 
 ---
 
-Built with ❤️ for the broadcast community
+Built with love for the broadcast community
